@@ -57,7 +57,7 @@ export const register = async (req: Request, res: Response) => {
     lastName,
     email,
     phoneNumber,
-    dob: birthday, // store as Date object
+    dob: birthday,
     gender,
     country,
     password: hashedPassword
