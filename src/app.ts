@@ -4,6 +4,7 @@ import registerRoutes from './routes/registerRoutes';
 import dotenv from 'dotenv';
 import swaggerUi from 'swagger-ui-express';
 import swaggerJSDoc from 'swagger-jsdoc';
+import loginRoutes from './routes/loginRoutes';
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api', registerRoutes);
+app.use('/api', loginRoutes);
 
 // Swagger configuration
 const swaggerOptions = {
@@ -20,7 +22,7 @@ const swaggerOptions = {
     info: {
       title: 'Fatigue Management API',
       version: '1.0.0',
-      description: 'API documentation for your project',
+      description: 'API documentation for Fatigue Management Backend project',
     },
     servers: [
       { url: 'http://localhost:8080/api' }
